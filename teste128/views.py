@@ -66,7 +66,7 @@ def create(request):
 		messages.add_message(request, messages.SUCCESS,"Novo registro criado com sucesso!")	
 
 	except Exception as e:
-		messages.add_message(request, messages.DANGER,"Não foi possível adicionar novo registro!")
+		messages.add_message(request, messages.WARNING,"Não foi possível adicionar novo registro!")
 	
 	dadosModelo = Modelo128.objects.all()
 	dadosPaginacao = paginacao(request,dadosModelo)
@@ -82,7 +82,7 @@ def remover(request):
 		#objModelo.delete()
 		messages.add_message(request, messages.SUCCESS,"Registro removido com sucesso!")
 	except Exception as e:
-		messages.add_message(request, messages.DANGER,"Não foi possivel remover o registro!")
+		messages.add_message(request, messages.WARNING,"Não foi possivel remover o registro!")
 		
 	dadosModelo = Modelo128.objects.all()
 	dadosPaginacao = paginacao(request,dadosModelo)

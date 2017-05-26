@@ -84,12 +84,17 @@
 					{% endfor %}
 				</ul> 
 
+				<div>
+					<span>Obs: Devido ser uma hospedagem free, não é permitido o acesso a urls externas, com excessão das que estão cadastradas na whitelist do serviço de hospedagem.</span>
+					<a href="https://www.pythonanywhere.com/whitelist/">Mais detalhes...</a>
+				</div>
+					
 				<div class="tabela_modelo">
 					<table class="table table-bordered table-hover table-responsive"  id="dataTable" cellspacing="0" id="dataTable">			
 
 		                <thead>
 		                    <tr>
-		                        <th width="30%">
+		                        <th width="15%">
 		                        	<center>
 		                        		<a href="novo" alt="Novo" title="Novo Registro" class="btn btn-success btn-sm">
 								        	<span class="glyphicon glyphicon-plus"></span>
@@ -113,7 +118,7 @@
 		                		
 		                		{% for dados in paginacao %}
 				                    <tr>
-				                        <td width="30%">
+				                        <td>
 				                        	<center>
 				                        		<a href="#" alt="Excluir" title="Remover Registro" class="btn btn-danger btn-sm" onclick="confirmar_exclusao('{{dados.campo1}}')">
 										        	<span class="glyphicon glyphicon-remove"></span>
@@ -123,8 +128,8 @@
 										        </a>
 				                        	</center>
 				                        </td>	                        
-				                        <td width="20%">{{dados.campo1}}</td>
-				                        <td width="50">{{dados.campo2}}</td>
+				                        <td>{{dados.campo1}}</td>
+				                        <td>{{dados.campo2}}</td>
 				                    </tr>
 
 				                {% endfor %}

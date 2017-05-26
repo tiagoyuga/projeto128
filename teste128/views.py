@@ -108,8 +108,8 @@ def gera_numero_aleatorio():
 
 def get_dados_api():
 	
-	#url = "https://api.randomuser.me/"
-	url = "https://blockchain.info/ticker"
+	url = "https://api.randomuser.me/"
+	#url = "https://blockchain.info/ticker"
 
 	request_api = urllib.request.urlopen(url)
 	response_api = request_api.read()

@@ -66,7 +66,7 @@ def create(request):
 		messages.add_message(request, messages.SUCCESS,"Novo registro criado com sucesso!")	
 
 	except Exception as e:
-		messages.add_message(request, messages.WARNING,"Não foi possível adicionar novo registro!")
+		messages.add_message(request, messages.WARNING,"Não foi possível adicionar novo registro! {0}".format(e))
 	
 	dadosModelo = Modelo128.objects.all()
 	dadosPaginacao = paginacao(request,dadosModelo)
